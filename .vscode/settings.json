@@ -1,5 +1,6 @@
 {
     "files.associations": {
+        "*.md": "markdown",
         "*.rasi": "css",
         "*.bbmodel": "json",
         "*.sublime-snippet": "xml",
@@ -55,6 +56,8 @@
         "sstream": "cpp",
         "stdexcept": "cpp",
         "streambuf": "cpp",
-        "typeinfo": "cpp"
+        "typeinfo": "cpp",
+        "bitset": "cpp",
+        "iostream": "cpp"
     }
 }
