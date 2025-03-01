@@ -13,23 +13,22 @@ int length;
 class MBigNumber
 {
 public:
-    char value[100];
-    int length=0;
+    char value[100000];
+    int length = 0;
     MBigNumber()
     {
         memset(value, '0', sizeof(value));
     }
     MBigNumber(long long x)
     {
-        
+
         memset(value, '0', sizeof(value));
         while (x)
         {
-            
+
             value[length++] = x % 10 + '0';
             x /= 10;
         }
-        
     }
     MBigNumber operator+(const MBigNumber &b)
     {
@@ -50,7 +49,7 @@ public:
     }
     MBigNumber operator*(const MBigNumber &b)
     {
-        
+
         MBigNumber res;
         for (int i = 0; i < length; i++)
         {
@@ -71,7 +70,7 @@ public:
                     carry /= 10;
                 }
             }
-            
+
             res = res + temp;
         }
         return res;
@@ -87,7 +86,7 @@ public:
             res += b.value[i];
         return res;
     }
-} total=1;
+} total = 1;
 int main()
 {
     scanf("%d", &n);
@@ -100,7 +99,7 @@ int main()
 
             if (j >= i)
             {
-                hasChoice =  dp[last][j - i] + log2(i);
+                hasChoice = dp[last][j - i] + log2(i);
             }
             if (hasChoice > noChoice)
             {
@@ -115,16 +114,19 @@ int main()
         }
         swap(now, last);
     }
-    int nowj=n;
-    for (int i=n;i>0;i--){
-        if (choice[i][nowj]){
-            ans[length++]=i;
-            total= total * i;
-            nowj-=i;
+    int nowj = n;
+    for (int i = n; i > 0; i--)
+    {
+        if (choice[i][nowj])
+        {
+            ans[length++] = i;
+            total = total * i;
+            nowj -= i;
         }
     }
-    for (int i=length-1;i>=0;i--){
-        printf("%d ",ans[i]);
+    for (int i = length - 1; i >= 0; i--)
+    {
+        printf("%d ", ans[i]);
     }
-    printf("\n%s\n",total.toString().c_str());
+    printf("\n%s\n", total.toString().c_str());
 }
