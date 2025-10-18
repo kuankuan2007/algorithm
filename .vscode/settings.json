@@ -1,6 +1,5 @@
 {
     "files.associations": {
-        "*.md": "markdown",
         "*.rasi": "css",
         "*.bbmodel": "json",
         "*.sublime-snippet": "xml",
@@ -19,6 +18,7 @@
         "*.toml": "toml",
         "*.vue": "vue",
         "*.py": "python",
+        "*.md": "markdown",
         "cstdio": "cpp",
         "array": "cpp",
         "atomic": "cpp",
@@ -59,6 +59,11 @@
         "typeinfo": "cpp",
         "bitset": "cpp",
         "iostream": "cpp",
-        "cstring": "cpp"
+        "cstring": "cpp",
+        "cerrno": "cpp",
+        "ios": "cpp",
+        "queue": "cpp",
+        "random": "cpp",
+        "unordered_set": "cpp"
     }
 }
